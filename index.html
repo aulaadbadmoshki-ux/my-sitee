@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Just a Question</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <h1 id="title">It started without a plan.</h1>
+
+  <div class="slideshow" id="slideshow" aria-label="Photo slideshow">
+    <img src="images/img1.jpg" alt="photo 1">
+    <img src="images/img2.jpg" alt="photo 2">
+    <img src="images/img3.jpg" alt="photo 3">
+    <img src="images/img4.jpg" alt="photo 4">
+  </div>
+
+  <p class="story" id="story">
+    I thought you were cool.<br>
+    Good dressing sense. Calm vibe.<br>
+    I didn’t plan to talk to you.<br>
+    One class. One metro ride.<br>
+    One message — only because I cared.<br>
+    And somehow… we became friends.
+  </p>
+
+  <div class="music">
+    <label for="songSelect">Play a song:</label>
+    <select id="songSelect">
+      <option value="music/palpal.mp3">Pal Pal – Talwinder</option>
+      <option value="music/premkinaiya.mp3">Prem Ki Naiya</option>
+      <option value="music/lorlor.mp3">Lor Lor</option>
+      <option value="music/arzkiya.mp3">Arz Kiya Hai</option>
+      <option value="music/churake.mp3">Churake</option>
+      <option value="music/showstopper.mp3">Showstopper</option>
+      <option value="music/guessitslove.mp3">Guess It’s Love</option>
+    </select>
+    <audio id="audio" controls preload="none"></audio>
+  </div>
+
+  <h2 class="ask">So tell me…</h2>
+  <h3 class="ask">Do we go out together?</h3>
+
+  <div class="buttons" id="btnWrap" aria-hidden="false">
+    <button id="yes" class="action">YES</button>
+    <button id="no" class="action" aria-label="No button">NO</button>
+  </div>
+
+  <p id="result" class="result" aria-live="polite"></p>
+
+  <div id="hint" class="hint" hidden>Hint: 02·14</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

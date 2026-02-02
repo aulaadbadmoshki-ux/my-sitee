@@ -1,0 +1,152 @@
+:root{
+  --bg:#0f0f0f;
+  --accent:#ff5a7a;
+  --muted:#999;
+  --card:#121212;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#080808 0%, #121212 100%);
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  width:100%;
+  max-width:720px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  text-align:center;
+}
+
+h1{margin:8px 0 14px;font-size:22px;font-weight:600}
+.story{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+  margin:12px 0 18px;
+}
+
+.slideshow{
+  width:100%;
+  height:320px;
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(90deg,#111,#0a0a0a);
+  margin-bottom:12px;
+}
+
+.slideshow img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transform:scale(1.03);
+  transition:opacity .8s ease, transform .8s ease;
+  user-select:none;
+}
+
+.slideshow img.show{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* music */
+.music{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin:16px 0;
+  flex-wrap:wrap;
+}
+
+.music label{color:var(--muted);font-size:14px}
+.music select{
+  background:var(--card);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* buttons area */
+.buttons{
+  position:relative;
+  height:110px;
+  margin-top:8px;
+}
+
+.action{
+  padding:12px 30px;
+  font-size:18px;
+  border: none;
+  border-radius:28px;
+  cursor:pointer;
+  user-select:none;
+  transition:transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  position:absolute;
+  top:20px;
+}
+
+/* YES */
+#yes{
+  left:50%;
+  transform:translateX(-120%);
+  background: linear-gradient(90deg, var(--accent), #ff8aa3);
+  color:white;
+}
+
+/* NO */
+#no{
+  left:60%;
+  background:#3a3a3a;
+  color:white;
+}
+
+/* result */
+.result{
+  margin-top:22px;
+  font-size:16px;
+  color:#ffdbe3;
+  min-height:72px;
+}
+
+/* small hint */
+.hint{
+  margin-top:12px;
+  color:#d9d9d9;
+  font-size:13px;
+  opacity:.9;
+}
+
+/* subtle confetti hearts for YES result */
+.hearts{
+  position:relative;
+}
+.hearts::after{
+  content:"";
+  position:absolute;
+  inset: -20px;
+  pointer-events:none;
+}
+@media (max-width:480px){
+  .slideshow{height:220px}
+  #yes{transform:translateX(-100%);}
+}
